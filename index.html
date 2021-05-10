@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="index.html">
+                    <span style=" font-family: 'Niconne';font-size: 42px;">Weatherly</span>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="about.html">about</a>
+                        <a class="nav-link" href="documentation.html">documentation</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <span class="iconsClass text-white" style="display: flex;justify-content:space-between;"
+                data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                <i class="fab fa-github fa-2x"></i>
+                <i class="fab fa-linkedin fa-2x"></i>
+                <i class="fab fa-hackerrank fa-2x"></i>
+                <i class="fab fa-facebook fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+            </span>
+        </nav>
+    </div>
+    <br>
+    <!-- temporarily social media link disabled -->
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Working on social media platforms.<br> it will be embedded in production!.
+                    <br>Thankyou</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- temporarily social media link disabled -->
+    <div class="wrapper-body"> </div>
+    <div class="container justify-content-center">
+        <div class="main-content">
+            <div class="form-search">
+                <form class="d-flex">
+                    <input class="form-control input-search me-2" type="search" placeholder="Search Location"
+                        aria-label="Search">
+                    <button class="btn btn-secondary btn-rounded" type="submit">Search</button>
+                </form>
+
+                <div class="container spinner">
+                    <hr>
+                    <div class="row justify-content-center">
+                        <button class="btn-sm btn-dark" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm " role="status" aria-hidden="true"></span>
+                            Searching for Location...
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container weather-forecast">
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card col-lg-6  col-sm-12 col-md-12">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"></h4>
+                            <div class="text-center">
+                                <p class="card-text"></p>
+                                <p class="card-text" style="border-radius: 50%;"><img id="myImg" src="" width="60"
+                                        height="60" alt="weather image" style="border-radius: 50%;">
+                                    </i></p>
+                                <br>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-temperature"></a>
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="container d-flex justify-content-center mt-10">
+            <div class="row">
+                <button class="btn btn-secondary btn-rounded more-info " type="submit"></button>
+
+            </div>
+        </div>
+        <div class="container welcome-text">
+            <div class="row">
+                <p>Access to Global Weather Data</p>
+                <p>Weatherly</p>
+            </div>
+        </div>
+        <br>
+        <div class="loading-add-more-section container">
+            <div class="row loading-animation">
+              
+            </div>
+
+        </div>
+        <br>
+        <div class="container add-more-section">
+
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 align-self-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <!-- Welcome to <span style="font-family:Niconne; font-size: 5rem;">Weatherly</span>  -->
+                    <img src="gif/weather_global.gif" alt="" srcset="" width="100%" data-aos="zoom-in"
+                        data-aos-duration="1500">
+
+                </div>
+                <div class="col-lg-6 movable-class">
+                    <img src="gif/weather_gif.gif" alt="" srcset="" width="100%" data-aos="zoom-in"
+                        data-aos-duration="1500">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="fixed-bottom">
+        Created by Peter Khalko
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="./lib/scirpt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+</body>

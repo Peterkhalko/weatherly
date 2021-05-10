@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet'>
+
+</head>
+
+<body style="color: white; overflow-x:hidden;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="index.html">
+                    <span style=" font-family: 'Niconne';font-size: 42px;">Weatherly</span>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="about.html">about</a>
+                        <a class="nav-link" href="documentation.html">documentation</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <span class="iconsClass text-white" style="display: flex;justify-content:space-between;"
+                data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                <i class="fab fa-github fa-2x"></i>
+                <i class="fab fa-linkedin fa-2x"></i>
+                <i class="fab fa-hackerrank fa-2x"></i>
+                <i class="fab fa-facebook fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+            </span>
+        </nav>
+        
+    </div>
+      <!-- temporarily social media link disabled -->
+      <div class="modal fade text-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Working on social media platforms.<br> it will be embedded in production!.
+                    <br>Thankyou</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- temporarily social media link disabled -->
+    <!-- Modal -->
+
+    <div class="container doc-content">
+        <header>
+            <!-- Background image -->
+            <div class="p-5 text-center bg-image" style="
+                background-image: url('./img/doc-jumbotron.jpg');
+                height: 400px;
+              ">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                    <div class="d-flex align-items-center text-left h-100 doc-jumbotron">
+                        <div class="text-white">
+                            <h4 class="mb-3 "> - <i>weatherly</i> app provides a GUI and API based interface to track
+                                the
+                                Weather and give many more geographical information of the preferred location. <br>
+                                - we have used 2 major <a href="">mapbox</a> and <a href="">weatherStack</a> API to
+                                generate the weather report</h4>
+                            <a class="btn btn-outline-light btn-lg m-2" href="https://www.mapbox.com/" role="button"
+                                rel="nofollow" target="_blank">MapBOx</a>
+                            <a class="btn btn-outline-light btn-lg m-2" href="https://weatherstack.com/" target="_blank"
+                                role="button">WeatherStack</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Background image -->
+        </header>
+        <h4> <u> High-level workflow of project </u>
+            <h4>
+                <h6>Weatherly app uses weatherStack API to fetch the global weather and geographical report data in the
+                    form of Javascript object notation (JSON) response. The weatherStack accepts the request of location
+                    in the form the latitude and longitude JSON object therefore we have used mapBox API which converts
+                    the given location into longitude and latitude first, besides we have set a middle ware which then
+                    hits the latitude and longitude as JSON request to the weather stack API to get the needed
+                    information.</h6>
+                <br>
+                <h4> <u> Javascript fetch() API </u>
+                    <h4>
+                        <h6>-Initially I took the input search location in the form i e, address</h6>
+                        <h6>-Then I parsed the input address via 'encodeURIComponent' in a API request to mapbox to get
+                            the latitude and logitude of the search location</h6>
+                        <h6>-Then the 2 object response which I recieved from mapbox, later i sent it to weatherstack
+                            API as query input</h6>
+                        <h6>-At the end the response recived from weatherstack is the JSON object with whole lot of
+                            weather infomation of the given location </h6>
+                        <br>
+                        <h4> <u> Below the raw JSON response for BOSTON</u>
+                            <h4>
+                                <h6> <kbd>
+                                        {
+                                        "request": {
+                                        "type": "City",
+                                        "query": "Boston, United States of America",
+                                        "language": "en",
+                                        "unit": "m"
+                                        },
+                                        "location": {
+                                        "name": "Boston",
+                                        "country": "United States of America",
+                                        "region": "Massachusetts",
+                                        "lat": "42.358",
+                                        "lon": "-71.060",
+                                        "timezone_id": "America/New_York",
+                                        "localtime": "2021-05-08 15:54",
+                                        "localtime_epoch": 1620489240,
+                                        "utc_offset": "-4.0"
+                                        },
+                                        "current": {
+                                        "observation_time": "07:54 PM",
+                                        "temperature": 12,
+                                        "weather_code": 122,
+                                        "weather_icons": [
+                                        "https://assets.weatherstack.com<br>/images/wsymbols01_png_64 <br>/wsymbol_0004_black_low_cloud.png"
+                                        ],
+                                        "weather_descriptions": [
+                                        "Overcast"
+                                        ],
+                                        "wind_speed": 20,
+                                        "wind_degree": 120,
+                                        "wind_dir": "ESE",
+                                        "pressure": 1011,
+                                        "precip": 0,
+                                        "humidity": 59,
+                                        "cloudcover": 100,
+                                        "feelslike": 10,
+                                        "uv_index": 3,
+                                        "visibility": 16,
+                                        "is_day": "yes"
+                                        }
+                                        }
+                                    </kbd></h6>
+    </div>
+    <br><br>
+    <footer>
+        Created by Peter Khalko
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+</body>
+
+</html>

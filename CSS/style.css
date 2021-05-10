@@ -1,0 +1,133 @@
+
+
+body {
+    font-family: Helvetica !important;
+    /* font-size: 1.25rem!important; */
+    color: white;
+    background-color: black!important;
+
+}
+.navbar-light .navbar-toggler {
+    color: white!important;
+    border-color: rgba(0,0,0,.1);
+}
+
+.wrapper-body{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  z-index: -1;
+  background: url('body-back.png');
+  animation-name: backMove;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+}
+.body-object{
+    color: white;
+    
+}
+.movable-class{
+    animation-name: backMove;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.main-content {
+   display: flex;
+   flex-direction: column;
+    justify-content:center;
+    margin-left: 7px;
+}
+.card {
+   
+    background-color: #E7F2F8!important;
+  
+}
+
+.add-more-section {
+    color: white;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.iconsClass i {
+    padding: 4px!important;
+}
+.loading-add-more-section{
+    background-image: url('../gif/loadmoregif.gif');
+    background-position: top;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.welcome-text{
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+@keyframes backMove {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(0px); }
+    70% { transform: translateY(10px); }
+    100%{transform: translateY(0px);}
+  }
+
+  .spinner{
+      display: inline-block;
+  }
+
+
+#headerLocation{
+    margin: 10px 0px;
+}
+footer{
+    
+    color:white;
+    margin: 10px 0px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box!important;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+    color: red;
+    font-weight: bold;
+
+}
+a{
+    text-decoration: none;
+    color: white!important;
+}
+
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+} 
+.weather-forecast{
+    color: black;
+}
+h2{
+    color: white!important;
+}
+.map-box-content{
+    font-size: 1.25em;
+}
